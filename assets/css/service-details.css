@@ -1,0 +1,226 @@
+/*--------------------------------------------------------------
+# Service pages (loaded only on pages inside /services)
+--------------------------------------------------------------*/
+
+.service-details .sd-block {
+  margin-top: 36px;
+}
+
+.service-details .sd-block h4 {
+  margin-bottom: 16px;
+}
+
+/* Buttons */
+.sd-btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.sd-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+/* Sidebar quote box */
+.service-details .sd-quote-box {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 3px solid var(--accent-color);
+  padding: 24px 30px;
+}
+
+.service-details .sd-quote-box p {
+  margin-bottom: 16px;
+}
+
+/* Image slider (same look as the portfolio details slider) */
+.service-details .service-slider {
+  margin-bottom: 28px;
+}
+
+.service-details .service-slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-details .service-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.service-details .service-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.service-details .service-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+/* Why choose us */
+.service-details .sd-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  height: 100%;
+  padding: 20px;
+  background: #f1f4fa;
+  border-radius: 8px;
+}
+
+.service-details .sd-why-item > i {
+  font-size: 28px;
+  line-height: 1;
+  color: var(--accent-color);
+}
+
+.service-details .sd-why-item strong {
+  display: block;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  margin-bottom: 4px;
+}
+
+.service-details .sd-why-item span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Process steps */
+.service-details .sd-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: sd-step;
+}
+
+.service-details .sd-steps li {
+  display: block;
+  position: relative;
+  padding: 0 0 22px 52px;
+  counter-increment: sd-step;
+}
+
+.service-details .sd-steps li:last-child {
+  padding-bottom: 0;
+}
+
+.service-details .sd-steps li::before {
+  content: counter(sd-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.service-details .sd-steps li strong {
+  display: block;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.service-details .sd-steps li span {
+  font-size: 15px;
+}
+
+/* Planning note */
+.service-details .sd-block p.sd-note {
+  margin: 0;
+  padding: 18px 22px;
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Bottom call to action */
+.service-details .sd-cta {
+  margin-top: 40px;
+  padding: 28px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-left: 3px solid var(--accent-color);
+}
+
+.service-details .sd-cta h4 {
+  margin-bottom: 6px;
+}
+
+.service-details .sd-cta p {
+  margin: 0;
+}
+
+/* Service switcher (mobile and tablet): one swipeable line of chips */
+.sd-switcher {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 22px;
+  padding: 2px 2px 10px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sd-switcher::-webkit-scrollbar {
+  display: none;
+}
+
+.sd-switcher a {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  padding: 8px 18px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 50px;
+  background: var(--surface-color);
+  color: var(--default-color);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.sd-switcher a.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 500;
+}
+
+/* Less empty space above the content on mobile and tablet */
+@media (max-width: 991px) {
+  .service-details.section {
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .service-details .service-slider .swiper-slide img {
+    height: 260px;
+  }
+}
