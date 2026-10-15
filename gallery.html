@@ -4,9 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Gallery - Royal Style Interiors</title>
-  <meta name="description" content="Browse our gallery of interior and carpentry work: images and videos of offices, wardrobes, doors, media walls, kitchens and more.">
-  <meta name="keywords" content="">
+  <title>Gallery | Royal Style Interiors — Wooden Doors, Wardrobes & Interior Fit-outs</title>
+  <meta name="description" content="Explore the Royal Style Interiors gallery: real photos and videos of wooden doors, wardrobes, media walls, American kitchens, ceilings, office and shop interior projects in Islamabad and Abbottabad.">
+  <meta name="keywords" content="interior gallery, wooden doors, wardrobes, media wall, American kitchen, wooden ceiling, office interior, shop interior, Islamabad, Abbottabad">
+  <meta name="author" content="Royal Style Interiors">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1f33">
+  <link rel="canonical" href="gallery.html">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gallery | Royal Style Interiors">
+  <meta property="og:description" content="Real photos and videos of our carpentry and interior fit-out work — doors, wardrobes, kitchens, ceilings, media walls and more.">
+  <meta property="og:image" content="assets/img/wardrobe/ikshana-productions-Uxr2PqYtgW4-unsplash.jpg">
+  <meta property="og:site_name" content="Royal Style Interiors">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gallery | Royal Style Interiors">
+  <meta name="twitter:description" content="Real photos and videos of our carpentry and interior fit-out work.">
+  <meta name="twitter:image" content="assets/img/wardrobe/ikshana-productions-Uxr2PqYtgW4-unsplash.jpg">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,17 +30,17 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Raleway:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/theme-royal-navy-gold.css" rel="stylesheet">
 </head>
 
 <body class="gallery-page">
@@ -34,7 +49,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/img/golden_logo (1).png" alt="Royal Style Interiors">
+        <img src="assets/img/img/logo%20(6).png" alt="Royal Style Interiors">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -57,22 +72,21 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/img/office.jpg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url('assets/img/wardrobe/hero-bg2.jpg');">
       <div class="container position-relative">
         <h1>Our Gallery</h1>
         <p>Images and videos of our interior and carpentry work.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li class="current">Gallery</li>
+            <li class="current">Portfolio &amp; Gallery</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
     <!-- Gallery Section -->
-    <section id="gallery" class="portfolio section">
+    <section id="gallery" class="portfolio section gallery-modern">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -82,140 +96,607 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
+        <div class="isotope-layout gallery-isotope" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <!-- 1 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/office.jpg" class="gallery-item glightbox" data-gallery="gallery-page">
-              <img src="assets/img/img/office.jpg" alt="Complete Office Work">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Complete Office Work</h4>
-              </div>
-            </a>
-          </div>
+          <ul class="portfolio-filters isotope-filters gallery-filters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-office">Office</li>
+            <li data-filter=".filter-kitchen">Kitchen</li>
+            <li data-filter=".filter-wardrobe">Wardrobe</li>
+            <li data-filter=".filter-doors">Doors</li>
+            <li data-filter=".filter-ceiling">Ceiling</li>
+            <li data-filter=".filter-media">Media Wall</li>
+            <li data-filter=".filter-reception">Reception</li>
+            <li data-filter=".filter-shop">Shop</li>
+            <li data-filter=".filter-flooring">Flooring</li>
+            <li data-filter=".filter-videos">Videos</li>
+          </ul>
 
-          <!-- 2 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/shop-interior.jpg" class="gallery-item glightbox" data-gallery="gallery-page">
-              <img src="assets/img/img/shop-interior.jpg" alt="Shop Interior">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Shop Interior</h4>
-              </div>
-            </a>
-          </div>
+          <div class="row isotope-container">
 
-          <!-- 3 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/wardrobe.jpg" class="gallery-item glightbox" data-gallery="gallery-page">
-              <img src="assets/img/img/wardrobe.jpg" alt="Wardrobe">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Wardrobe</h4>
-              </div>
-            </a>
-          </div>
+            <!-- Office -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-office">
+              <a href="assets/img/complete office work/office.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Corporate Office Fit-out">
+                <img src="assets/img/complete office work/office.jpg" alt="Corporate office interior fit-out by Royal Style Interiors" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Office</span>
+                  <div class="gallery-caption">
+                    <h4>Corporate Office Fit-out</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 4 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/wooden-doors.jfif" class="gallery-item glightbox" data-gallery="gallery-page" data-type="image">
-              <img src="assets/img/img/wooden-doors.jfif" alt="Wooden Doors">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Wooden Doors</h4>
-              </div>
-            </a>
-          </div>
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-office is-tall">
+              <a href="assets/img/complete office work/blue-sky-IHUzuqnK87g-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Office Lounge">
+                <img src="assets/img/complete office work/blue-sky-IHUzuqnK87g-unsplash.jpg" alt="Modern office lounge interior" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Office</span>
+                  <div class="gallery-caption">
+                    <h4>Office Lounge</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 5 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/wooden-floor.jfif" class="gallery-item glightbox" data-gallery="gallery-page" data-type="image">
-              <img src="assets/img/img/wooden-floor.jfif" alt="Wooden Flooring">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Wooden Flooring</h4>
-              </div>
-            </a>
-          </div>
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-office">
+              <a href="assets/img/complete office work/radowan-nakif-rehan-79g15d8oo4M-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Workspace Fit-out">
+                <img src="assets/img/complete office work/radowan-nakif-rehan-79g15d8oo4M-unsplash.jpg" alt="Office workspace interior fit-out" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Office</span>
+                  <div class="gallery-caption">
+                    <h4>Workspace Fit-out</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 6 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/media-wall.jfif" class="gallery-item glightbox" data-gallery="gallery-page" data-type="image">
-              <img src="assets/img/img/media-wall.jfif" alt="Media Wall">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Media Wall</h4>
-              </div>
-            </a>
-          </div>
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-office">
+              <a href="assets/img/complete office work/the-yardcoworking-y-d0sHFxPX0-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Co-working Space">
+                <img src="assets/img/complete office work/the-yardcoworking-y-d0sHFxPX0-unsplash.jpg" alt="Co-working office space interior" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Office</span>
+                  <div class="gallery-caption">
+                    <h4>Co-working Space</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 7 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/recption-table_1.jfif" class="gallery-item glightbox" data-gallery="gallery-page" data-type="image">
-              <img src="assets/img/img/recption-table_1.jfif" alt="Hotel Reception Table and Interior">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Hotel Reception Table</h4>
-              </div>
-            </a>
-          </div>
+            <!-- Kitchen -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-kitchen is-wide">
+              <a href="assets/img/kitchen/american-kitchen.jfif" class="gallery-item glightbox" data-type="image" data-gallery="gallery-page" data-glightbox="title: American Kitchen">
+                <img src="assets/img/kitchen/american-kitchen.jfif" alt="American style kitchen cabinetry" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Kitchen</span>
+                  <div class="gallery-caption">
+                    <h4>American Kitchen</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 8 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/reception_table_2.jfif" class="gallery-item glightbox" data-gallery="gallery-page" data-type="image">
-              <img src="assets/img/img/reception_table_2.jfif" alt="Hotel Reception Interior">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Hotel Reception Interior</h4>
-              </div>
-            </a>
-          </div>
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-kitchen is-tall">
+              <a href="assets/img/kitchen/don-kaveen-C-bUN_XxD-I-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Modern Kitchen">
+                <img src="assets/img/kitchen/don-kaveen-C-bUN_XxD-I-unsplash.jpg" alt="Modern kitchen with island" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Kitchen</span>
+                  <div class="gallery-caption">
+                    <h4>Modern Kitchen</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 9 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/american-kitchen.jfif" class="gallery-item glightbox" data-gallery="gallery-page" data-type="image">
-              <img src="assets/img/img/american-kitchen.jfif" alt="American Kitchen">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>American Kitchen</h4>
-              </div>
-            </a>
-          </div>
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-kitchen">
+              <a href="assets/img/kitchen/ikshana-productions-Kl-pEeXbbb4-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Kitchen Island">
+                <img src="assets/img/kitchen/ikshana-productions-Kl-pEeXbbb4-unsplash.jpg" alt="Kitchen island and cabinets" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Kitchen</span>
+                  <div class="gallery-caption">
+                    <h4>Kitchen Island</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 10 -->
-          <div class="col-lg-4 col-md-6">
-            <a href="assets/img/img/ceiling.jfif" class="gallery-item glightbox" data-gallery="gallery-page" data-type="image">
-              <img src="assets/img/img/ceiling.jfif" alt="Wooden Ceiling">
-              <div class="gallery-overlay">
-                <i class="bi bi-zoom-in gallery-icon"></i>
-                <h4>Wooden Ceiling</h4>
-              </div>
-            </a>
-          </div>
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-kitchen">
+              <a href="assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.11 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Kitchen Finish">
+                <img src="assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.11 PM.jpeg" alt="Finished kitchen cabinet detail" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Kitchen</span>
+                  <div class="gallery-caption">
+                    <h4>Kitchen Finish</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 11 - Video -->
-          <div class="col-lg-4 col-md-6">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="gallery-item glightbox" data-gallery="gallery-page">
-              <img src="assets/img/img/shop-interior.jpg" alt="Complete Office Work video">
-              <span class="gallery-play"><i class="bi bi-play-fill"></i></span>
-              <div class="gallery-overlay">
-                <i class="bi bi-play-circle gallery-icon"></i>
-                <h4>Complete Office Work - Video</h4>
-              </div>
-            </a>
-          </div>
+            <!-- Wardrobe -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-wardrobe">
+              <a href="assets/img/wardrobe/ikshana-productions-Uxr2PqYtgW4-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Walk-in Wardrobe">
+                <img src="assets/img/wardrobe/ikshana-productions-Uxr2PqYtgW4-unsplash.jpg" alt="Walk-in wardrobe interior" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Wardrobe</span>
+                  <div class="gallery-caption">
+                    <h4>Walk-in Wardrobe</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <!-- 12 - Video -->
-          <div class="col-lg-4 col-md-6">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="gallery-item glightbox" data-gallery="gallery-page">
-              <img src="assets/img/img/workers.jpeg" alt="Our Workshop video">
-              <span class="gallery-play"><i class="bi bi-play-fill"></i></span>
-              <div class="gallery-overlay">
-                <i class="bi bi-play-circle gallery-icon"></i>
-                <h4>Our Workshop - Video</h4>
-              </div>
-            </a>
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-wardrobe is-tall">
+              <a href="assets/img/wardrobe/hero-bg2.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Fitted Wardrobe">
+                <img src="assets/img/wardrobe/hero-bg2.jpg" alt="Fitted wardrobe with mirror" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Wardrobe</span>
+                  <div class="gallery-caption">
+                    <h4>Fitted Wardrobe</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-wardrobe">
+              <a href="assets/img/wardrobe/WhatsApp Image 2026-10-14 at 6.42.59 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Sliding Wardrobe">
+                <img src="assets/img/wardrobe/WhatsApp Image 2026-10-14 at 6.42.59 PM.jpeg" alt="Sliding door wardrobe" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Wardrobe</span>
+                  <div class="gallery-caption">
+                    <h4>Sliding Wardrobe</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-wardrobe">
+              <a href="assets/img/wardrobe/WhatsApp Image 2026-10-14 at 8.21.19 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Built-in Wardrobe">
+                <img src="assets/img/wardrobe/WhatsApp Image 2026-10-14 at 8.21.19 PM.jpeg" alt="Built-in wardrobe detail" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Wardrobe</span>
+                  <div class="gallery-caption">
+                    <h4>Built-in Wardrobe</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Doors -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-doors">
+              <a href="assets/img/Doors/1.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Carved Wooden Door">
+                <img src="assets/img/Doors/1.jpeg" alt="Carved wooden door" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Doors</span>
+                  <div class="gallery-caption">
+                    <h4>Carved Wooden Door</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-doors is-tall">
+              <a href="assets/img/Doors/WhatsApp Image 2026-10-14 at 6.40.24 PM (1).jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Panel Door">
+                <img src="assets/img/Doors/WhatsApp Image 2026-10-14 at 6.40.24 PM (1).jpeg" alt="Panel wooden door" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Doors</span>
+                  <div class="gallery-caption">
+                    <h4>Panel Door</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-doors">
+              <a href="assets/img/Doors/WhatsApp Image 2026-10-14 at 6.40.21 PM (2).jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Wooden Door Finish">
+                <img src="assets/img/Doors/WhatsApp Image 2026-10-14 at 6.40.21 PM (2).jpeg" alt="Wooden door finish" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Doors</span>
+                  <div class="gallery-caption">
+                    <h4>Wooden Door Finish</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Ceiling -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-ceiling is-tall">
+              <a href="assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.46 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Wooden Ceiling">
+                <img src="assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.46 PM.jpeg" alt="Wooden ceiling design" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Ceiling</span>
+                  <div class="gallery-caption">
+                    <h4>Wooden Ceiling</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-ceiling">
+              <a href="assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.47 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Feature Ceiling">
+                <img src="assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.47 PM.jpeg" alt="Feature wooden ceiling" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Ceiling</span>
+                  <div class="gallery-caption">
+                    <h4>Feature Ceiling</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-ceiling is-wide">
+              <a href="assets/img/ceiling/6.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Ceiling Panelling">
+                <img src="assets/img/ceiling/6.jpeg" alt="Wooden ceiling panelling" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Ceiling</span>
+                  <div class="gallery-caption">
+                    <h4>Ceiling Panelling</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Media Wall -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-media is-wide">
+              <a href="assets/img/media wall/ikshana-productions-8xcWxhq8IP4-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Modern Media Wall">
+                <img src="assets/img/media wall/ikshana-productions-8xcWxhq8IP4-unsplash.jpg" alt="Modern media wall with TV unit" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Media Wall</span>
+                  <div class="gallery-caption">
+                    <h4>Modern Media Wall</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-media">
+              <a href="assets/img/media wall/dinesh-lunked-CfBDgt5BafU-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Lounge Media Unit">
+                <img src="assets/img/media wall/dinesh-lunked-CfBDgt5BafU-unsplash.jpg" alt="Living room media unit" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Media Wall</span>
+                  <div class="gallery-caption">
+                    <h4>Lounge Media Unit</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-media">
+              <a href="assets/img/media wall/originalfile1769073089927-9849.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: TV Feature Wall">
+                <img src="assets/img/media wall/originalfile1769073089927-9849.jpg" alt="TV feature wall design" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Media Wall</span>
+                  <div class="gallery-caption">
+                    <h4>TV Feature Wall</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- More: Reception, Shop, Flooring, Projects -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-reception is-wide">
+              <a href="assets/img/reception/reception-table_1.jfif" class="gallery-item glightbox" data-type="image" data-gallery="gallery-page" data-glightbox="title: Reception Desk">
+                <img src="assets/img/reception/reception-table_1.jfif" alt="Hotel reception desk" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Reception</span>
+                  <div class="gallery-caption">
+                    <h4>Reception Desk</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-reception">
+              <a href="assets/img/reception/gold-s-gym-nepal-90kQpR0G8Lo-unsplash.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Reception Interior">
+                <img src="assets/img/reception/gold-s-gym-nepal-90kQpR0G8Lo-unsplash.jpg" alt="Reception interior with wooden panelling" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Reception</span>
+                  <div class="gallery-caption">
+                    <h4>Reception Interior</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-shop is-wide">
+              <a href="assets/img/shop/shop-interior.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Shop Interior">
+                <img src="assets/img/shop/shop-interior.jpg" alt="Retail shop interior fit-out" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Shop</span>
+                  <div class="gallery-caption">
+                    <h4>Shop Interior</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-flooring">
+              <a href="assets/img/flooring/wooden-floor.jfif" class="gallery-item glightbox" data-type="image" data-gallery="gallery-page" data-glightbox="title: Wooden Flooring">
+                <img src="assets/img/flooring/wooden-floor.jfif" alt="Wooden flooring installation" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Flooring</span>
+                  <div class="gallery-caption">
+                    <h4>Wooden Flooring</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-doors is-tall">
+              <a href="assets/img/gallery/WhatsApp Image 2026-10-14 at 6.40.24 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: On-site Installation">
+                <img src="assets/img/gallery/WhatsApp Image 2026-10-14 at 6.40.24 PM.jpeg" alt="On-site interior installation work" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Doors</span>
+                  <div class="gallery-caption">
+                    <h4>On-site Installation</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-media">
+              <a href="assets/img/gallery/WhatsApp Image 2026-10-14 at 6.45.26 PM (1).jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Completed Work">
+                <img src="assets/img/gallery/WhatsApp Image 2026-10-14 at 6.45.26 PM (1).jpeg" alt="Completed interior carpentry work" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Media Wall</span>
+                  <div class="gallery-caption">
+                    <h4>Completed Work</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Videos -->
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-videos is-wide">
+              <a href="assets/img/video.mp4" class="gallery-item glightbox" data-gallery="gallery-page" data-type="video" data-glightbox="title: Workshop Tour">
+                <img src="assets/img/workers.jpeg" alt="Royal Style Interiors workshop video" loading="lazy" decoding="async">
+                <span class="gallery-play"><i class="bi bi-play-fill"></i></span>
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Video</span>
+                  <div class="gallery-caption">
+                    <h4>Workshop Tour</h4>
+                    <span class="gallery-zoom"><i class="bi bi-play-circle"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-videos">
+              <a href="assets/img/WhatsApp Video 2026-10-14 at 8.21.11 PM.mp4" class="gallery-item glightbox" data-gallery="gallery-page" data-type="video" data-glightbox="title: Kitchen in Progress">
+                <img src="assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.11 PM.jpeg" alt="Kitchen work video" loading="lazy" decoding="async">
+                <span class="gallery-play"><i class="bi bi-play-fill"></i></span>
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Video</span>
+                  <div class="gallery-caption">
+                    <h4>Kitchen in Progress</h4>
+                    <span class="gallery-zoom"><i class="bi bi-play-circle"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-videos">
+              <a href="assets/img/WhatsApp Video 2026-10-14 at 6.45.27 PM (1).mp4" class="gallery-item glightbox" data-gallery="gallery-page" data-type="video" data-glightbox="title: Site Walkthrough">
+                <img src="assets/img/gallery/WhatsApp Image 2026-10-14 at 6.45.25 PM.jpeg" alt="Interior project site walkthrough video" loading="lazy" decoding="async">
+                <span class="gallery-play"><i class="bi bi-play-fill"></i></span>
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Video</span>
+                  <div class="gallery-caption">
+                    <h4>Site Walkthrough</h4>
+                    <span class="gallery-zoom"><i class="bi bi-play-circle"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-office">
+              <a href="assets/img/complete office work/home-office-needham-custom-home-01-fallon-custom-homes-and-renovations-img~1201bccf051d9dc5_9-2881-1-7ffec0d.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Home Office">
+                <img src="assets/img/complete office work/home-office-needham-custom-home-01-fallon-custom-homes-and-renovations-img~1201bccf051d9dc5_9-2881-1-7ffec0d.jpg" alt="Home office carpentry and storage" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Office</span>
+                  <div class="gallery-caption">
+                    <h4>Home Office</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-office">
+              <a href="assets/img/complete office work/WhatsApp Image 2026-10-14 at 8.29.22 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Office Carpentry">
+                <img src="assets/img/complete office work/WhatsApp Image 2026-10-14 at 8.29.22 PM.jpeg" alt="Office carpentry and finishing work" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Office</span>
+                  <div class="gallery-caption">
+                    <h4>Office Carpentry</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-kitchen">
+              <a href="assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.08 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Kitchen Cabinetry">
+                <img src="assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.08 PM.jpeg" alt="Custom kitchen cabinetry" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Kitchen</span>
+                  <div class="gallery-caption">
+                    <h4>Kitchen Cabinetry</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-kitchen">
+              <a href="assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.05 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Kitchen Detail">
+                <img src="assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.05 PM.jpeg" alt="American kitchen detail" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Kitchen</span>
+                  <div class="gallery-caption">
+                    <h4>Kitchen Detail</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-wardrobe">
+              <a href="assets/img/wardrobe/wardrobe.jpg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Modern Wardrobe">
+                <img src="assets/img/wardrobe/wardrobe.jpg" alt="Custom modern wardrobe" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Wardrobe</span>
+                  <div class="gallery-caption">
+                    <h4>Modern Wardrobe</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-wardrobe">
+              <a href="assets/img/wardrobe/WhatsApp Image 2026-10-14 at 8.24.36 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Wardrobe Storage">
+                <img src="assets/img/wardrobe/WhatsApp Image 2026-10-14 at 8.24.36 PM.jpeg" alt="Wardrobe storage detail" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Wardrobe</span>
+                  <div class="gallery-caption">
+                    <h4>Wardrobe Storage</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-doors">
+              <a href="assets/img/Doors/wooden-doors.jfif" class="gallery-item glightbox" data-type="image" data-gallery="gallery-page" data-glightbox="title: Wooden Doors">
+                <img src="assets/img/Doors/wooden-doors.jfif" alt="Custom wooden doors" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Doors</span>
+                  <div class="gallery-caption">
+                    <h4>Wooden Doors</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-doors">
+              <a href="assets/img/Doors/WhatsApp Image 2026-10-14 at 8.22.25 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Door Detail">
+                <img src="assets/img/Doors/WhatsApp Image 2026-10-14 at 8.22.25 PM.jpeg" alt="Wooden door detail and finish" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Doors</span>
+                  <div class="gallery-caption">
+                    <h4>Door Detail</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-ceiling">
+              <a href="assets/img/ceiling/2.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Wooden Ceiling">
+                <img src="assets/img/ceiling/2.jpeg" alt="Wooden ceiling design" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Ceiling</span>
+                  <div class="gallery-caption">
+                    <h4>Wooden Ceiling</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-ceiling">
+              <a href="assets/img/ceiling/3.jfif" class="gallery-item glightbox" data-type="image" data-gallery="gallery-page" data-glightbox="title: Ceiling Design">
+                <img src="assets/img/ceiling/3.jfif" alt="Custom ceiling design" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Ceiling</span>
+                  <div class="gallery-caption">
+                    <h4>Ceiling Design</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-ceiling">
+              <a href="assets/img/ceiling/8.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Ceiling Finish">
+                <img src="assets/img/ceiling/8.jpeg" alt="Wooden ceiling finish" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Ceiling</span>
+                  <div class="gallery-caption">
+                    <h4>Ceiling Finish</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-media">
+              <a href="assets/img/media wall/media-wall.jfif" class="gallery-item glightbox" data-type="image" data-gallery="gallery-page" data-glightbox="title: Media Wall">
+                <img src="assets/img/media wall/media-wall.jfif" alt="Custom media wall" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Media Wall</span>
+                  <div class="gallery-caption">
+                    <h4>Media Wall</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-media">
+              <a href="assets/img/media wall/WhatsApp Image 2026-10-14 at 8.23.05 PM.jpeg" class="gallery-item glightbox" data-gallery="gallery-page" data-glightbox="title: Media Unit">
+                <img src="assets/img/media wall/WhatsApp Image 2026-10-14 at 8.23.05 PM.jpeg" alt="Media wall unit detail" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Media Wall</span>
+                  <div class="gallery-caption">
+                    <h4>Media Unit</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6 isotope-item filter-reception">
+              <a href="assets/img/reception/reception_table_2.jfif" class="gallery-item glightbox" data-type="image" data-gallery="gallery-page" data-glightbox="title: Reception Counter">
+                <img src="assets/img/reception/reception_table_2.jfif" alt="Hotel reception counter" loading="lazy" decoding="async">
+                <div class="gallery-overlay">
+                  <span class="gallery-badge">Reception</span>
+                  <div class="gallery-caption">
+                    <h4>Reception Counter</h4>
+                    <span class="gallery-zoom"><i class="bi bi-zoom-in"></i></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
           </div>
 
         </div>
@@ -298,10 +779,10 @@
 
   <!-- Floating Buttons -->
   <div class="floating-btns">
-    <a href="https://wa.me/923115900009" target="_blank" rel="noopener" class="whatsapp-btn d-flex align-items-center justify-content-center">
+    <a href="https://wa.me/923115900009" target="_blank" rel="noopener" class="whatsapp-btn d-flex align-items-center justify-content-center" aria-label="Chat on WhatsApp">
       <i class="bi bi-whatsapp"></i>
     </a>
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
   </div>
 
   <!-- Preloader -->
@@ -312,8 +793,6 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 

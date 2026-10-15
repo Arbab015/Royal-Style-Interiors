@@ -7,7 +7,21 @@
   <title>Wooden Ceiling - Royal Style Interiors</title>
   <meta name="description" content="Custom wooden ceiling work that adds warmth, texture and architectural character.">
   <meta name="keywords" content="">
+  <meta name="author" content="Royal Style Interiors">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1f33">
+  <link rel="canonical" href="wooden-ceiling.html">
 
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Wooden Ceiling - Royal Style Interiors">
+  <meta property="og:description" content="Custom wooden ceiling work that adds warmth, texture and architectural character.">
+  <meta property="og:image" content="../assets/img/ceiling/1.jpeg">
+  <meta property="og:site_name" content="Royal Style Interiors">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wooden Ceiling - Royal Style Interiors">
+  <meta name="twitter:description" content="Custom wooden ceiling work that adds warmth, texture and architectural character.">
+  <meta name="twitter:image" content="../assets/img/ceiling/1.jpeg">
   <!-- Favicons -->
   <link href="../assets/img/favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -15,7 +29,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Raleway:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,9 +40,26 @@
 
   <!-- Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/theme-royal-navy-gold.css" rel="stylesheet">
 
   <!-- Service page extra styles -->
   <link href="../assets/css/service-details.css" rel="stylesheet">
+  <!-- Structured data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Wooden Ceiling",
+    "description": "Custom wooden ceiling work that adds warmth, texture and architectural character.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Royal Style Interiors",
+      "telephone": "+92-311-590-0009",
+      "email": "arbabr225@gmail.com"
+    },
+    "areaServed": ["Islamabad", "Abbottabad", "Pakistan"]
+  }
+  </script>
 </head>
 
 <body class="service-details-page">
@@ -37,7 +68,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="../index.html" class="logo d-flex align-items-center me-auto">
-        <img src="../assets/img/img/golden_logo (1).png" alt="Royal Style Interiors">
+        <img src="../assets/img/img/logo%20(6).png" alt="Royal Style Interiors">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -60,7 +91,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(../assets/img/img/ceiling.jfif);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(../assets/img/ceiling/1.jpeg);">
       <div class="container position-relative">
         <h1>Wooden Ceiling</h1>
         <p>Custom wooden ceiling work that adds warmth, texture and architectural character.</p>
@@ -118,14 +149,12 @@
           <!-- Main content -->
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
-            <!-- Image slider (Swiper, same setup as portfolio-details).
-                 Right now it has one image. To add more, uncomment the examples below (or copy a
-                 <div class="swiper-slide"> block) and set your image paths. Loop, autoplay and the
-                 dots under the slider work automatically once there is more than one slide. -->
+            <!-- Image slider (Swiper) with wooden ceiling project photos -->
             <div class="service-slider swiper init-swiper">
 
               <script type="application/json" class="swiper-config">
                 {
+                  "lazy": { "loadPrevNext": true, "loadPrevNextAmount": 2 },
                   "loop": true,
                   "speed": 600,
                   "autoplay": {
@@ -142,15 +171,123 @@
 
                 <div class="swiper-wrapper align-items-center">
                   <div class="swiper-slide">
-                    <img src="../assets/img/img/ceiling.jfif" alt="Wooden Ceiling">
+                    <img data-src="../assets/img/ceiling/1.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="../assets/img/img/shop-interior.jpg" alt="Wooden Ceiling">
+                    <img data-src="../assets/img/ceiling/2.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="../assets/img/working-2.jpg" alt="Wooden Ceiling">
+                    <img data-src="../assets/img/ceiling/3.jfif" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.46 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/5.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/6.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/7.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/8.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.47 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.48 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-09-29 at 8.05.39 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.47 PM (1).jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.48 PM (1).jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.49 PM (1).jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.49 PM (2).jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.49 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.50 PM (1).jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.50 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.51 PM (1).jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.51 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.53 PM (1).jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.53 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.54 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img data-src="../assets/img/ceiling/WhatsApp Image 2026-10-14 at 8.22.55 PM.jpeg" class="swiper-lazy" alt="Wooden Ceiling">
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>

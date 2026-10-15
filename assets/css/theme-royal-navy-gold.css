@@ -1,0 +1,324 @@
+/*--------------------------------------------------------------
+# Royal Style Interiors - Navy & Gold theme
+# Loaded after main.css on every page (index, gallery, services/*).
+# Colors only: fonts and layout come from main.css.
+--------------------------------------------------------------*/
+:root {
+    --heading-color: #0b1f33;
+    --accent-color: #d4a64a;
+    --contrast-color: #0b1f33;            /* text on gold buttons/badges */
+    --nav-hover-color: #d4a64a;
+    --nav-mobile-background-color: #0b1f33;
+    --nav-dropdown-background-color: #0b1f33;
+    --nav-dropdown-color: #cfd8e3;
+    --nav-dropdown-hover-color: #d4a64a;
+}
+.light-background { --background-color: #f4f6fa; }
+.dark-background  { --background-color: #0b1f33; --surface-color: #14304d; --contrast-color: #ffffff; }
+
+/* Header */
+/* One variable drives the navbar height, the logo size and where the mobile
+   menu opens, so everything stays aligned on every screen. */
+:root { --header-height: 92px; }
+.header {
+    --contrast-color: #ffffff;
+    padding: 0;
+    min-height: var(--header-height);
+}
+.header .logo { line-height: 1; }
+.header .logo img { max-height: 60px; width: auto; margin-right: 10px; }
+.scrolled .header { --background-color: rgba(11, 31, 51, 0.94); }
+.header .cta-btn:hover,
+.header .cta-btn:focus:hover { color: #0b1f33; }
+.footer .social-links a:hover { color: #0b1f33; }
+
+/* Mobile menu opens exactly below the navbar and the close icon stays centred */
+@media (max-width: 1199px) {
+    .navmenu ul { inset: var(--header-height) 20px 20px 20px; }
+    .mobile-nav-active .mobile-nav-toggle { top: calc((var(--header-height) - 32px) / 2); }
+}
+@media (max-width: 575px) {
+    :root { --header-height: 76px; }
+    .header .logo img { max-height: 52px; }
+    .header .cta-btn { font-size: 12px; padding: 6px 12px; margin-left: 12px; }
+}
+
+/* Hero */
+.hero:before { background: linear-gradient(rgba(11, 31, 51, .78), rgba(11, 31, 51, .9)); }
+.hero-eyebrow { display: inline-block; font-size: clamp(10px, 1.1vw, 13px); font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #d4a64a; margin-bottom: 16px; }
+.hero-eyebrow i { font-size: 12px; margin: 0 6px; }
+.hero h1,
+.hero h2 { font-size: clamp(30px, 6.6vw, 76px); font-weight: 800; line-height: 1.06; letter-spacing: -.01em; text-wrap: balance; }
+.hero-typed { font-size: clamp(16px, 2.4vw, 26px); font-weight: 500; color: #fff; margin: 18px 0 12px; min-height: 1.6em; }
+.hero-typed-text { color: #d4a64a; font-weight: 600; }
+.hero-typed-cursor { display: inline-block; width: 2px; height: 1em; background: #d4a64a; margin-left: 3px; vertical-align: -.12em; animation: rsBlink 1s steps(1) infinite; }
+@keyframes rsBlink { 50% { opacity: 0; } }
+.hero p { max-width: 680px; margin: 0 auto; font-size: clamp(14px, 1.5vw, 17px); line-height: 1.7; color: rgba(255, 255, 255, .85); }
+.hero .btn-get-started,
+.hero .btn-watch-video { display: inline-flex; align-items: center; justify-content: center; padding: 12px 26px; border-radius: 6px; font-size: 14px; font-weight: 600; line-height: 1.1; }
+.hero .btn-get-started { background: #d4a64a; color: #0b1f33; border: 2px solid #d4a64a; }
+.hero .btn-get-started:hover { background: #e3b960; border-color: #e3b960; transform: translateY(-2px); }
+.hero .btn-watch-video { margin-left: 14px; border: 2px solid rgba(255, 255, 255, .85); color: #fff; font-weight: 500; }
+.hero .btn-watch-video i { color: #d4a64a; font-size: 22px; margin-right: 8px; line-height: 0; }
+.hero .btn-watch-video:hover { color: #d4a64a; border-color: #d4a64a; }
+
+/* Keep the hero readable and neatly stacked on phones */
+@media (max-width: 575px) {
+    .hero { padding: 64px 0; }
+    .hero-eyebrow { letter-spacing: .14em; margin-bottom: 12px; }
+    .hero .btn-get-started,
+    .hero .btn-watch-video { padding: 11px 20px; font-size: 13px; }
+}
+@media (max-width: 420px) {
+    .hero .d-flex { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .hero .btn-watch-video { margin-left: 0; }
+}
+
+/* Stats: navy band, big gold numbers */
+.stats { background: #0b1f33; padding: 70px 0; }
+.stats .stat { text-align: center; }
+.stats .stat span { display: block; font-family: var(--heading-font); font-weight: 800; font-size: clamp(44px, 5vw, 64px); line-height: 1.1; color: #d4a64a; }
+.stats .stat p { margin: 6px 0 0; padding: 0; font-size: 15px; letter-spacing: .06em; color: #fff; opacity: .9; }
+
+/*--------------------------------------------------------------
+# Gallery & Portfolio cards
+--------------------------------------------------------------*/
+.gallery-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #0b1f33;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 10px 30px rgba(11, 31, 51, .12);
+    transition: transform .4s ease, box-shadow .4s ease;
+    outline: none;
+}
+.gallery-item.is-tall,
+.isotope-item.is-tall .gallery-item { aspect-ratio: 3 / 4; }
+.gallery-item.is-wide,
+.isotope-item.is-wide .gallery-item { aspect-ratio: 16 / 10; }
+.gallery-item:hover,
+.gallery-item:focus-visible {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(11, 31, 51, .26);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .7s cubic-bezier(.2, .6, .2, 1);
+}
+.gallery-item:hover img,
+.gallery-item:focus-visible img { transform: scale(1.09); }
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    opacity: 0;
+    background: linear-gradient(to top, rgba(11, 31, 51, .94) 0%, rgba(11, 31, 51, .45) 45%, rgba(11, 31, 51, .05) 100%);
+    transition: opacity .4s ease;
+}
+.gallery-item:hover .gallery-overlay,
+.gallery-item:focus-visible .gallery-overlay { opacity: 1; }
+
+.gallery-badge {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 50px;
+    background: #d4a64a;
+    color: #0b1f33;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.gallery-caption {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    transform: translateY(10px);
+    transition: transform .4s ease;
+}
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus-visible .gallery-caption { transform: translateY(0); }
+.gallery-caption h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.gallery-zoom {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 166, 74, .18);
+    border: 1px solid rgba(212, 166, 74, .7);
+    color: #d4a64a;
+    font-size: 18px;
+}
+
+.gallery-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 166, 74, .92);
+    color: #0b1f33;
+    font-size: 30px;
+    transition: transform .3s ease, background .3s ease;
+}
+.gallery-play::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 166, 74, .8);
+    animation: galleryPulse 1.8s ease-out infinite;
+}
+.gallery-item:hover .gallery-play { transform: translate(-50%, -50%) scale(1.12); background: #e3b960; }
+@keyframes galleryPulse {
+    0% { transform: scale(1); opacity: .8; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Always show captions on touch devices */
+@media (hover: none), (max-width: 991px) {
+    .gallery-overlay { opacity: 1; }
+    .gallery-caption { transform: none; }
+}
+
+/* Filter chips */
+.portfolio .gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 34px;
+    padding: 0;
+}
+.portfolio .gallery-filters li {
+    display: inline-block;
+    margin: 0;
+    padding: 9px 20px;
+    border: 1px solid color-mix(in srgb, #0b1f33, transparent 82%);
+    border-radius: 50px;
+    background: #f1f4fa;
+    color: #0b1f33;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+.portfolio .gallery-filters li:hover {
+    border-color: #d4a64a;
+    color: #0b1f33;
+    transform: translateY(-2px);
+}
+.portfolio .gallery-filters li.filter-active {
+    background: #d4a64a;
+    border-color: #d4a64a;
+    color: #0b1f33;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(212, 166, 74, .35);
+}
+@media (max-width: 767px) {
+    .portfolio .gallery-filters {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 4px 2px 12px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .portfolio .gallery-filters::-webkit-scrollbar { display: none; }
+    .portfolio .gallery-filters li { flex: 0 0 auto; }
+}
+
+/* CTA button under galleries */
+.gallery-more { text-align: center; margin-top: 44px; }
+.load-more-btn {
+    display: inline-block;
+    padding: 13px 36px;
+    border-radius: 50px;
+    background: #d4a64a;
+    color: #0b1f33;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 2px solid #d4a64a;
+    transition: all .3s ease;
+}
+.load-more-btn:hover {
+    background: transparent;
+    color: #d4a64a;
+    transform: translateY(-2px);
+}
+
+/* Slightly shorter homepage portfolio cards */
+.portfolio-grid .gallery-item { aspect-ratio: 1 / 1; }
+
+/* Isotope spacing (padding keeps masonry gaps reliable) */
+.gallery-isotope .isotope-container { margin-left: -14px; margin-right: -14px; }
+.gallery-isotope .isotope-item { padding: 14px; }
+.portfolio-grid { --bs-gutter-y: 1.5rem; }
+
+/* Responsive card content so badges, captions and icons fit small screens */
+@media (max-width: 767px) {
+    .gallery-overlay { padding: 12px; }
+    .gallery-caption h4 { font-size: 15px; }
+    .gallery-zoom { width: 34px; height: 34px; font-size: 15px; }
+    .gallery-play { width: 54px; height: 54px; font-size: 24px; }
+}
+
+@media (max-width: 575px) {
+    .gallery-overlay { padding: 9px; }
+    .gallery-badge { padding: 3px 9px; font-size: 9px; letter-spacing: .06em; }
+    .gallery-caption { gap: 6px; }
+    .gallery-caption h4 { font-size: 12.5px; line-height: 1.2; }
+    .gallery-zoom { width: 28px; height: 28px; font-size: 13px; }
+    .gallery-play { width: 44px; height: 44px; font-size: 20px; }
+    .gallery-isotope .isotope-item { padding: 8px; }
+    .gallery-isotope .isotope-container { margin-left: -8px; margin-right: -8px; }
+}
+
+@media (max-width: 400px) {
+    .gallery-caption h4 { font-size: 11.5px; }
+    .gallery-zoom { width: 26px; height: 26px; font-size: 12px; }
+    .gallery-play { width: 40px; height: 40px; font-size: 18px; }
+}
+
+/* Uniform card size on small/medium screens so the grid looks tidy and even
+   (matches the homepage portfolio cards) */
+@media (max-width: 991px) {
+    .gallery-item,
+    .gallery-item.is-tall,
+    .gallery-item.is-wide,
+    .isotope-item.is-tall .gallery-item,
+    .isotope-item.is-wide .gallery-item,
+    .gallery-isotope .gallery-item {
+        aspect-ratio: 1 / 1;
+    }
+}
