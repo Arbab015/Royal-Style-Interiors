@@ -2,16 +2,16 @@
 # Service pages (loaded only on pages inside /services)
 --------------------------------------------------------------*/
 
-.service-details .sd-block {
+.service-details .service-block {
   margin-top: 36px;
 }
 
-.service-details .sd-block h4 {
+.service-details .service-block h4 {
   margin-bottom: 16px;
 }
 
 /* Buttons */
-.sd-btn {
+.service-btn {
   display: inline-block;
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -24,20 +24,20 @@
   white-space: nowrap;
 }
 
-.sd-btn:hover {
+.service-btn:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
 }
 
 /* Sidebar quote box */
-.service-details .sd-quote-box {
+.service-details .service-quote-box {
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-top: 3px solid var(--accent-color);
   padding: 24px 30px;
 }
 
-.service-details .sd-quote-box p {
+.service-details .service-quote-box p {
   margin-bottom: 16px;
 }
 
@@ -52,6 +52,38 @@
   height: 460px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+/* Slide image opens the full-size photo in a lightbox on click */
+.service-details .service-slider .service-slide-link {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.service-details .service-slider .service-slide-link::after {
+  content: "View full image";
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%) translateY(8px);
+  background: rgba(11, 31, 51, .82);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: .04em;
+  padding: 8px 16px;
+  border-radius: 50px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.service-details .service-slider .service-slide-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .service-details .service-slider .swiper-pagination {
@@ -71,7 +103,7 @@
 }
 
 /* Why choose us */
-.service-details .sd-why-item {
+.service-details .service-why-item {
   display: flex;
   align-items: flex-start;
   gap: 14px;
@@ -81,46 +113,46 @@
   border-radius: 8px;
 }
 
-.service-details .sd-why-item > i {
+.service-details .service-why-item > i {
   font-size: 28px;
   line-height: 1;
   color: var(--accent-color);
 }
 
-.service-details .sd-why-item strong {
+.service-details .service-why-item strong {
   display: block;
   color: var(--heading-color);
   font-family: var(--heading-font);
   margin-bottom: 4px;
 }
 
-.service-details .sd-why-item span {
+.service-details .service-why-item span {
   display: block;
   font-size: 14px;
   line-height: 1.6;
 }
 
 /* Process steps */
-.service-details .sd-steps {
+.service-details .service-steps {
   list-style: none;
   padding: 0;
   margin: 0;
-  counter-reset: sd-step;
+  counter-reset: service-step;
 }
 
-.service-details .sd-steps li {
+.service-details .service-steps li {
   display: block;
   position: relative;
   padding: 0 0 22px 52px;
-  counter-increment: sd-step;
+  counter-increment: service-step;
 }
 
-.service-details .sd-steps li:last-child {
+.service-details .service-steps li:last-child {
   padding-bottom: 0;
 }
 
-.service-details .sd-steps li::before {
-  content: counter(sd-step);
+.service-details .service-steps li::before {
+  content: counter(service-step);
   position: absolute;
   left: 0;
   top: 0;
@@ -135,18 +167,18 @@
   font-weight: 700;
 }
 
-.service-details .sd-steps li strong {
+.service-details .service-steps li strong {
   display: block;
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
 
-.service-details .sd-steps li span {
+.service-details .service-steps li span {
   font-size: 15px;
 }
 
 /* Planning note */
-.service-details .sd-block p.sd-note {
+.service-details .service-block p.service-note {
   margin: 0;
   padding: 18px 22px;
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
@@ -155,7 +187,7 @@
 }
 
 /* Bottom call to action */
-.service-details .sd-cta {
+.service-details .service-cta {
   margin-top: 40px;
   padding: 28px 30px;
   display: flex;
@@ -168,16 +200,16 @@
   border-left: 3px solid var(--accent-color);
 }
 
-.service-details .sd-cta h4 {
+.service-details .service-cta h4 {
   margin-bottom: 6px;
 }
 
-.service-details .sd-cta p {
+.service-details .service-cta p {
   margin: 0;
 }
 
 /* Service switcher (mobile and tablet): one swipeable line of chips */
-.sd-switcher {
+.service-switcher {
   position: relative;
   display: flex;
   gap: 10px;
@@ -189,11 +221,11 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.sd-switcher::-webkit-scrollbar {
+.service-switcher::-webkit-scrollbar {
   display: none;
 }
 
-.sd-switcher a {
+.service-switcher a {
   flex: 0 0 auto;
   scroll-snap-align: center;
   padding: 8px 18px;
@@ -205,7 +237,7 @@
   white-space: nowrap;
 }
 
-.sd-switcher a.active {
+.service-switcher a.active {
   background: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);

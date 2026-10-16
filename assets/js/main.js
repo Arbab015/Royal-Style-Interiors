@@ -210,8 +210,9 @@
 
   function navmenuScrollspy() {
     navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
+      let target = navmenulink.hash || navmenulink.getAttribute('data-scrollspy');
+      if (!target) return;
+      let section = document.querySelector(target);
       if (!section) return;
       let position = window.scrollY + 200;
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {

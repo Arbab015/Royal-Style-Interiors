@@ -40,7 +40,7 @@
 
   <!-- Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
-  <link href="../assets/css/theme-royal-navy-gold.css" rel="stylesheet">
+  <link href="../assets/css/rs-hero.css" rel="stylesheet">
 
   <!-- Service page extra styles -->
   <link href="../assets/css/service-details.css" rel="stylesheet">
@@ -77,7 +77,6 @@
           <li><a href="../index.html#about">About</a></li>
           <li><a href="../index.html#services" class="active">Services</a></li>
           <li><a href="../gallery.html">Gallery</a></li>
-          <li><a href="../index.html#team">Team</a></li>
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -91,7 +90,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(../assets/img/kitchen/american-kitchen.jfif);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url('../assets/img/kitchen/american-kitchen.jfif');">
       <div class="container position-relative">
         <h1>American Kitchen</h1>
         <p>Custom American-style kitchens with practical storage, quality cabinetry and efficient layouts.</p>
@@ -111,7 +110,7 @@
       <div class="container">
 
       <!-- Service switcher for mobile and tablet: one swipeable line instead of the long sidebar list -->
-      <nav class="sd-switcher d-lg-none" aria-label="Switch service">
+      <nav class="service-switcher d-lg-none" aria-label="Switch service">
         <a href="complete-office-work.html">Complete Office Work</a>
         <a href="doors.html">Wooden Doors</a>
         <a href="wardrobe.html">Wardrobe</a>
@@ -139,25 +138,21 @@
               <a href="shop.html">Shop Interior</a>
             </div>
 
-            <div class="sd-quote-box">
+            <div class="service-quote-box">
               <h4>Planning a kitchen?</h4>
               <p>Tell us about your space and we will help you plan it, from the first sketch to the final fitting.</p>
-              <a href="../index.html#contact" class="sd-btn">Get a Free Quote</a>
+              <a href="../index.html#contact" class="service-btn">Get a Free Quote</a>
             </div>
           </div>
 
           <!-- Main content -->
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
-            <!-- Image slider (Swiper, same setup as portfolio-details).
-                 Right now it has one image. To add more, uncomment the examples below (or copy a
-                 <div class="swiper-slide"> block) and set your image paths. Loop, autoplay and the
-                 dots under the slider work automatically once there is more than one slide. -->
+            <!-- Image slider (Swiper). Click any photo to open the full-size preview. -->
             <div class="service-slider swiper init-swiper">
 
               <script type="application/json" class="swiper-config">
                 {
-                  "lazy": { "loadPrevNext": true, "loadPrevNextAmount": 2 },
                   "loop": true,
                   "speed": 600,
                   "autoplay": {
@@ -174,67 +169,54 @@
 
                 <div class="swiper-wrapper align-items-center">
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/american-kitchen.jfif" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/american-kitchen.jfif" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/american-kitchen.jfif" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/don-kaveen-C-bUN_XxD-I-unsplash.jpg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/don-kaveen-C-bUN_XxD-I-unsplash.jpg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/don-kaveen-C-bUN_XxD-I-unsplash.jpg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/ikshana-productions-Kl-pEeXbbb4-unsplash.jpg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/ikshana-productions-Kl-pEeXbbb4-unsplash.jpg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/ikshana-productions-Kl-pEeXbbb4-unsplash.jpg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/hero-bg3.jpg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/hero-bg3.jpg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/hero-bg3.jpg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.08 PM.jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.08 PM.jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.08 PM.jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.09 PM.jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.09 PM.jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.16.09 PM.jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.05 PM.jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.05 PM.jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.05 PM.jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.07 PM.jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.07 PM.jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.07 PM.jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.08 PM.jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.08 PM.jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.08 PM.jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.11 PM.jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.11 PM.jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.11 PM.jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.15 PM (1).jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.15 PM (1).jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.15 PM (1).jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.15 PM.jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.15 PM.jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.15 PM.jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
 
                   <div class="swiper-slide">
-                    <img data-src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.20 PM (1).jpeg" class="swiper-lazy" alt="American Kitchen">
-                    <div class="swiper-lazy-preloader"></div>
+                    <a class="glightbox service-slide-link" href="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.20 PM (1).jpeg" data-gallery="service-american-kitchen" data-type="image" aria-label="View full image"><img src="../assets/img/kitchen/WhatsApp Image 2026-10-14 at 8.21.20 PM (1).jpeg" loading="lazy" decoding="async" alt="American Kitchen"></a>
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -251,7 +233,7 @@
               Each kitchen is planned for your room and your budget, from the layout to the finishes.
             </p>
 
-            <div class="sd-block">
+            <div class="service-block">
               <h4>What is included</h4>
               <ul>
                 <li><i class="bi bi-check-circle"></i> <span>Quality cabinetry made to your measurements</span></li>
@@ -264,11 +246,11 @@
               </ul>
             </div>
 
-            <div class="sd-block">
+            <div class="service-block">
               <h4>Why choose Royal Style Interiors</h4>
               <div class="row g-3">
                 <div class="col-sm-6">
-                  <div class="sd-why-item">
+                  <div class="service-why-item">
                     <i class="bi bi-tools"></i>
                     <div>
                       <strong>Our own workshop</strong>
@@ -277,7 +259,7 @@
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="sd-why-item">
+                  <div class="service-why-item">
                     <i class="bi bi-award"></i>
                     <div>
                       <strong>20 years of experience</strong>
@@ -286,7 +268,7 @@
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="sd-why-item">
+                  <div class="service-why-item">
                     <i class="bi bi-rulers"></i>
                     <div>
                       <strong>Made to fit</strong>
@@ -295,7 +277,7 @@
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="sd-why-item">
+                  <div class="service-why-item">
                     <i class="bi bi-people"></i>
                     <div>
                       <strong>One accountable team</strong>
@@ -306,9 +288,9 @@
               </div>
             </div>
 
-            <div class="sd-block">
+            <div class="service-block">
               <h4>How we work</h4>
-              <ol class="sd-steps">
+              <ol class="service-steps">
                 <li><strong>Consultation and measurement</strong><span>We discuss how you cook and live and measure the kitchen.</span></li>
                 <li><strong>Layout and design</strong><span>We plan the layout, storage and countertops and agree the design with you.</span></li>
                 <li><strong>Materials and finishes</strong><span>We choose the cabinet finishes, colours and handles together.</span></li>
@@ -317,13 +299,13 @@
               </ol>
             </div>
 
-            <div class="sd-block">
-              <p class="sd-note">
+            <div class="service-block">
+              <p class="service-note">
                 <strong>Planning a kitchen?</strong> It helps to know the size of the kitchen, a rough layout, how you like to cook, the style you want and your budget. Not sure? Just call us and we will help you plan it.
               </p>
             </div>
 
-            <div class="sd-cta">
+            <div class="service-cta">
               <div>
                 <h4>Interested in an American Kitchen?</h4>
                 <p>
@@ -333,7 +315,7 @@
                   and we will help you plan your project.
                 </p>
               </div>
-              <a href="../index.html#contact" class="sd-btn">Contact Us</a>
+              <a href="../index.html#contact" class="service-btn">Contact Us</a>
             </div>
 
           </div>
@@ -357,7 +339,7 @@
           <div class="footer-contact pt-3">
             <p>Head Office: I-10/4, Islamabad, Pakistan</p>
             <p>Branch: Mandian, Mansehra Road, Abbottabad (Opening Soon)</p>
-            <p class="mt-3"><strong>Phone:</strong> <a href="tel:+923115900009">+92 311 590 0009</a></p>
+            <p class="mt-3"><strong>Phone:</strong> <a href="tel:+923115900009">+92 311 590 0009</a> / <a href="tel:+923445900090">+92 344 590 0090</a></p>
             <p><strong>Email:</strong> <a href="mailto:arbabr225@gmail.com">arbabr225@gmail.com</a></p>
           </div>
           <div class="social-links d-flex mt-4">
@@ -368,7 +350,7 @@
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="../index.html">Home</a></li>
@@ -379,7 +361,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-3 footer-links">
+        <div class="col-lg-3 col-md-3 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="complete-office-work.html">Complete Office Work</a></li>
@@ -387,6 +369,10 @@
             <li><i class="bi bi-chevron-right"></i> <a href="wardrobe.html">Wardrobe</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="wooden-flooring.html">Wooden Flooring</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="media-wall.html">Media Wall</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="reception.html">Reception Interior</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="american-kitchen.html">American Kitchen</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="wooden-ceiling.html">Wooden Ceiling</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="shop.html">Shop Interior</a></li>
           </ul>
         </div>
 
@@ -405,7 +391,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>Â© <span>Copyright</span> <strong class="px-1 sitename">Royal Style Interiors</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Royal Style Interiors</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -433,10 +419,7 @@
   <script src="../assets/vendor/php-email-form/validate.js"></script>
   <script src="../assets/vendor/aos/aos.js"></script>
   <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
   <script src="../assets/js/main.js"></script>
@@ -444,7 +427,7 @@
   <!-- Centre the active service chip in the mobile switcher -->
   <script>
     (function () {
-      var bar = document.querySelector('.sd-switcher');
+      var bar = document.querySelector('.service-switcher');
       var active = bar && bar.querySelector('.active');
       if (active) {
         bar.scrollLeft = active.offsetLeft - (bar.clientWidth - active.offsetWidth) / 2;
