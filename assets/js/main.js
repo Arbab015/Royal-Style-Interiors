@@ -112,38 +112,51 @@
     });
 
     // While a fullscreen preview (image or video) is open, freeze every Swiper
-    // autoplay on the page so the slider never swipes to the next slide while
-    // the visitor is watching. Autoplay resumes when the preview is closed.
     let autoplaySwipers = [];
+
+    function handleGslideVideos() {
+      var slides = document.querySelectorAll('.glightbox-container .gslide');
+      slides.forEach(function(slide) {
+        var video = slide.querySelector('video');
+        if (!video) return;
+        if (slide.classList.contains('current')) {
+          try {
+            video.setAttribute('playsinline', 'true');
+            video.setAttribute('webkit-playsinline', 'true');
+            video.controls = true;
+            video.removeAttribute('muted');
+            video.muted = false;
+            if (typeof video.volume !== 'undefined') video.volume = 1.0;
+            var p = video.play();
+            if (p !== undefined) {
+              p.catch(function() {
+                try {
+                  video.muted = true;
+                  video.setAttribute('muted', '');
+                  video.play().catch(function(){});
+                } catch(e){}
+              });
+            }
+          } catch(e){}
+        } else {
+          try {
+            video.pause();
+            video.currentTime = 0;
+          } catch(e){}
+        }
+      });
+    }
+
     lightbox.on('open', function() {
       autoplaySwipers = [];
       document.querySelectorAll('.init-swiper').forEach(function(el) {
-        let swiper = el.swiper;
+        var swiper = el.swiper;
         if (swiper && swiper.autoplay && swiper.autoplay.running) {
           swiper.autoplay.stop();
           autoplaySwipers.push(swiper);
         }
       });
-      // Force autoplay on mobile for videos in lightbox
-      setTimeout(function() {
-        document.querySelectorAll('.glightbox-container video').forEach(function(video) {
-          try {
-            video.setAttribute('playsinline', '');
-            video.setAttribute('webkit-playsinline', '');
-            video.setAttribute('preload', 'auto');
-            // Try to autoplay (muted helps on mobile)
-            if (video.muted === false) {
-              video.muted = true;
-            }
-            var playPromise = video.play();
-            if (playPromise !== undefined) {
-              playPromise.catch(function() {
-                // Autoplay blocked, user will need to tap play
-              });
-            }
-          } catch (e) {}
-        });
-      }, 50);
+      setTimeout(handleGslideVideos, 40);
     });
     lightbox.on('close', function() {
       autoplaySwipers.forEach(function(swiper) {
@@ -192,11 +205,14 @@
 
       if (media.tagName === 'VIDEO') {
         try {
-          media.setAttribute('playsinline', '');
-          media.setAttribute('webkit-playsinline', '');
+          media.setAttribute('playsinline', 'true');
+          media.setAttribute('webkit-playsinline', 'true');
           media.setAttribute('preload', 'auto');
-          if (media.muted === false) {
-            media.muted = true;
+          media.controls = true;
+          media.removeAttribute('muted');
+          media.muted = false;
+          if (typeof media.volume !== 'undefined') {
+            media.volume = 1.0;
           }
         } catch (e) {}
         if (media.readyState < 3) {
@@ -215,29 +231,51 @@
             mediaBox.classList.remove('media-loading');
           }, { once: true });
         });
-        // Try to autoplay
+        // Try to autoplay with sound
         setTimeout(function() {
           var p = media.play();
           if (p !== undefined) {
-            p.catch(function() {});
+            p.catch(function() {
+              try {
+                media.muted = true;
+                media.setAttribute('muted', '');
+                var p2 = media.play();
+                if (p2 !== undefined) p2.catch(function() {});
+              } catch (e) {}
+            });
           }
         }, 30);
       }
     }
 
-    lightbox.on('slide_after_load', function(data) {
-      watchPreviewMedia(data.slide || data.slideNode);
-    });
-    lightbox.on('slide_changed', function(data) {
-      if (data && data.current) {
-        watchPreviewMedia(data.current.slide);
-      }
+    lightbox.on('slide_changed', function() {
+      setTimeout(handleGslideVideos, 40);
     });
     lightbox.on('open', function() {
       setTimeout(function() {
-        var current = document.querySelector('.glightbox-container .gslide.current');
+        document.querySelectorAll('.glightbox-container video').forEach(function(v) {
+          try { v.pause(); v.currentTime = 0; } catch(e){}
+        });
+        var current = document.querySelector('.glightbox-container .gslide.current') || document.querySelector('.glightbox-container .gslide');
         if (current) {
           watchPreviewMedia(current);
+          var video = current.querySelector('video');
+          if (video) {
+            try {
+              video.setAttribute('playsinline', 'true');
+              video.setAttribute('webkit-playsinline', 'true');
+              video.controls = true;
+              video.removeAttribute('muted');
+              video.muted = false;
+              if (typeof video.volume !== 'undefined') video.volume = 1.0;
+              var p = video.play();
+              if (p !== undefined) {
+                p.catch(function() {
+                  try { video.muted = true; video.setAttribute('muted',''); video.play().catch(function(){}); } catch(e){}
+                });
+              }
+            } catch(e){}
+          }
         }
       }, 60);
     });
