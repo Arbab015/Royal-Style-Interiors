@@ -652,7 +652,8 @@
         </div>
 
         <div class="col-lg-6">
-          <form action="forms/contact" method="post" class="php-email-form">
+          <form action="https://api.web3forms.com/submit" method="post" class="php-email-form">
+            <input type="hidden" name="access_key" value="fc2c6116-6994-4490-9c71-6d3a14612510">
             <div class="row gy-4">
 
               <div class="col-md-6">
@@ -803,6 +804,81 @@
     // Hide the Load More button
     document.querySelector('.load-more-btn').style.display = 'none';
   }
+</script>
+
+<!-- Contact form handler (Web3Forms) - only affects the contact form -->
+<script>
+(function () {
+  var form = document.querySelector('form.php-email-form');
+  if (!form) return;
+
+  var loading = form.querySelector('.loading');
+  var errorBox = form.querySelector('.error-message');
+  var sentBox = form.querySelector('.sent-message');
+  var button = form.querySelector('button[type="submit"]');
+
+  function toggle(el, on) {
+    if (!el) return;
+    el.classList.toggle('d-block', on);
+  }
+  function showError(msg) {
+    errorBox.textContent = msg;
+    toggle(errorBox, true);
+  }
+
+  // Capture phase on document: runs before validate.js, so the old PHP flow is skipped.
+  document.addEventListener('submit', function (e) {
+    if (e.target !== form) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    toggle(errorBox, false);
+    toggle(sentBox, false);
+
+    // Honeypot: bots fill the hidden "website" field. Pretend success, send nothing.
+    if (form.elements['website'] && form.elements['website'].value) {
+      toggle(sentBox, true);
+      form.reset();
+      return;
+    }
+
+    toggle(loading, true);
+    if (button) button.disabled = true;
+
+    var payload = {};
+    new FormData(form).forEach(function (value, key) {
+      if (key !== 'website') payload[key] = value;
+    });
+    payload.from_name = 'Royal Style Interiors';
+    payload.subject = 'New website enquiry: ' + (payload.subject || '');
+
+    fetch(form.getAttribute('action'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (data) {
+          return { ok: response.ok, data: data };
+        });
+      })
+      .then(function (result) {
+        if (result.ok && result.data.success) {
+          toggle(sentBox, true);
+          form.reset();
+        } else {
+          showError(result.data.message || 'Sorry, your message could not be sent. Please try again or contact us on WhatsApp.');
+        }
+      })
+      .catch(function () {
+        showError('Network error. Please check your connection and try again.');
+      })
+      .then(function () {
+        toggle(loading, false);
+        if (button) button.disabled = false;
+      });
+  }, true);
+})();
 </script>
 
 </body>

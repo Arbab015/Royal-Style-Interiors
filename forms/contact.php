@@ -12,7 +12,7 @@
 // ------------------------------------------------------------------
 // Settings
 // ------------------------------------------------------------------
-$receiving_email_address = 'sajidreem@gmail.com';   // where messages are delivered
+$receiving_email_address = 'arbabr42@gmail.com';   // where messages are delivered
 
 // ------------------------------------------------------------------
 header('Content-Type: text/plain; charset=UTF-8');
